@@ -2,12 +2,6 @@
 import Charming_Melody
 import mido
 import numpy as np
-# from sklearn.decomposition import PCA
-# import matplotlib.pyplot as plt
-# # PAUSE = float('inf')
-# from scipy.cluster.hierarchy import dendrogram, linkage
-# import math
-# import statistics
 
 # ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 def list_of_melodies_and_its_parameters(Melody_Library,
