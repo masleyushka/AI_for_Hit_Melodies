@@ -85,8 +85,8 @@ from keras import layers
 import datetime
 
 # # Normalization: 0, ..., 12 --> 0, ..., 1
-# X_train = X_train / 12
-# X_test = X_test / 12
+X_train = X_train / 12
+X_test = X_test / 12
 
 FILTERS = 256
 KERNEL_SIZE = 5
