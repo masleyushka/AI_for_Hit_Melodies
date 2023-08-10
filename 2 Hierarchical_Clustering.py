@@ -2,7 +2,7 @@
 from scipy.cluster.hierarchy import dendrogram, linkage
 import matplotlib.pyplot as plt
 
-# ---- ---- ---- ---- Data Preprocessing (Common Part for Projects 1-5) ---- ---- ---- ----
+# ---- ---- ---- ---- Data Preprocessing (Common Part for Projects 1-4) ---- ---- ---- ----
 import Utilities
 import mido
 import numpy as np
