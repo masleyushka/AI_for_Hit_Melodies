@@ -1,4 +1,4 @@
-# ---- ---- ---- ---- Data Preprocessing (Common Part for Projects 1-5) ---- ---- ---- ----
+# ---- ---- ---- ---- Data Preprocessing (Common Part for Projects 1-4) ---- ---- ---- ----
 import Utilities
 import mido
 import numpy as np
@@ -50,7 +50,7 @@ Y0 = np.zeros(N0)
 Y1 = np.ones(N1)
 Y = np.hstack([Y0, Y1])
 
-# ---- ---- ---- ---- Shuffling the Resulting Dataset ---- ---- ---- ----
+# ---- ---- ---- ---- Shuffling the Resulting Dataset (Common Part for Projects 3-4) ---- ---- ---- ----
 idx = np.random.permutation(N)
 X = X[idx]
 Y = Y[idx]
@@ -59,7 +59,7 @@ for k in idx:
     L_rearranged.append(L[k])
 L = L_rearranged.copy()
 
-# ---- ---- ---- ---- Splitting Dataset into Train and Test Subsets ---- ---- ---- ----
+# ---- ---- ---- ---- Splitting Dataset into Train and Test Subsets (Common Part for Projects 3-4) ---- ---- ---- ----
 """ Proportion of the train subset to the whole dataset: """
 percentage_train = 0.9
 N_train = round(N * percentage_train)
@@ -84,7 +84,7 @@ from tensorflow import keras
 from keras import layers
 import datetime
 
-# # Normalization: 0, ..., 12 --> 0, ..., 1
+# Normalization: 0, ..., 12 --> 0, ..., 1
 X_train = X_train / 12
 X_test = X_test / 12
 
