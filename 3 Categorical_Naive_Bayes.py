@@ -1,4 +1,4 @@
-# ---- ---- ---- ---- Data Preprocessing (Common Part for Projects 1-5) ---- ---- ---- ----
+# ---- ---- ---- ---- Data Preprocessing (Common Part for Projects 1-4) ---- ---- ---- ----
 import Utilities
 import mido
 import numpy as np
@@ -38,7 +38,7 @@ N1, L1, D, Melodies_1 = Utilities.list_of_melodies_and_its_parameters(
 # for item in Melodies_1:
 #     print(item.degrees_and_pauses)
 
-# ---- ---- ---- ---- Merging Two Datasets  (Common Part for Projects 3-4) ---- ---- ---- ----
+# ---- ---- ---- ---- Merging Two Datasets (Common Part for Projects 3-4) ---- ---- ---- ----
 N = N0 + N1
 L = L0 + L1
 X = np.zeros((N, D))
@@ -50,7 +50,7 @@ Y0 = np.zeros(N0)
 Y1 = np.ones(N1)
 Y = np.hstack([Y0, Y1])
 
-# ---- ---- ---- ---- Shuffling the Resulting Dataset ---- ---- ---- ----
+# ---- ---- ---- ---- Shuffling the Resulting Dataset (Common Part for Projects 3-4) ---- ---- ---- ----
 idx = np.random.permutation(N)
 X = X[idx]
 Y = Y[idx]
@@ -59,7 +59,7 @@ for k in idx:
     L_rearranged.append(L[k])
 L = L_rearranged.copy()
 
-# ---- ---- ---- ---- Splitting Dataset into Train and Test Subsets ---- ---- ---- ----
+# ---- ---- ---- ---- Splitting Dataset into Train and Test Subsets (Common Part for Projects 3-4) ---- ---- ---- ----
 """ Proportion of the train subset to the whole dataset: """
 percentage_train = 0.9
 N_train = round(N * percentage_train)
